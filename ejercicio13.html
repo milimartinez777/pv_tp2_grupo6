@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+
+    <script>
+        const mostrarArreglo = (arreglo) => {
+            arreglo.forEach(num => {
+                document.write(`${num}<br>`);
+            });
+        };
+
+        let cantidad = parseInt(prompt("¿Cuántos números deseas ingresar?"));
+        let numeros = [];
+
+        if (!isNaN(cantidad) && cantidad > 0) {
+            for (let i = 0; i < cantidad; i++) {
+                let valor = Number(prompt(`Ingresa el número ${i + 1}:`));
+                numeros.push(valor);
+            }
+            document.write(`<h3>Los números ingresados son:</h3>`);
+            mostrarArreglo(numeros);
+        } else {
+            document.write(`Entrada no válida. Por favor, ingresa un número mayor a 0.`);
+        }
+    </script>
+</body>
+</html>
