@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 JS - Promedio de Números</title>
+</head>
+<body>
+
+    <script>
+        
+        let cantidad = parseInt(prompt("¿Cuántos números enteros desea ingresar?"));
+
+        
+        if (!isNaN(cantidad) && cantidad > 0) {
+            
+            let numeros = [];
+            let suma = 0;
+
+            
+            for (let i = 0; i < cantidad; i++) {
+                
+                let numeroIngresado = parseInt(prompt(`Ingrese el número entero ${i + 1} de ${cantidad}:`));
+
+                
+                if (!isNaN(numeroIngresado)) {
+                    numeros.push(numeroIngresado);
+                    suma += numeroIngresado; 
+                } else {
+                    alert("Valor inválido. Por favor, ingrese un número entero.");
+                    i--; 
+                }
+            }
+
+            
+            let promedio = suma / numeros.length;
+
+            
+            let resultadoFinal = `
+                <h2>Resultados de la operación</h2>
+                <ul>
+                    <li><strong>Números ingresados:</strong> [ ${numeros.join(', ')} ]</li>
+                    <li><strong>Promedio calculado:</strong> ${promedio}</li>
+                </ul>
+            `;
+
+            
+            document.body.innerHTML += resultadoFinal;
+
+        } else {
+            
+            document.body.innerHTML += `<h3>Error: Debe ingresar una cantidad numérica mayor a cero. Recargue la página.</h3>`;
+        }
+    </script>
+    
+</body>
+</html>

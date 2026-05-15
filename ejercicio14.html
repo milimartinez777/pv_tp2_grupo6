@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14 - Duplicar Arreglo</title>
+</head>
+<body>
+
+    <h1>Ejercicio: Duplicar Arreglo</h1>
+    
+    <div id="resultado"></div>
+
+    <script>
+        
+        function duplicar(arreglo) {
+            let arregloDuplicado = [];
+            for (let i = 0; i < arreglo.length; i++) {
+                arregloDuplicado.push(arreglo[i] * 2);
+            }
+            return arregloDuplicado;
+        }
+
+        
+        let cantidadNumeros = parseInt(prompt("¿Cuántos números deseas ingresar en el arreglo?"));
+        let numerosIngresados = [];
+
+        
+        if (!isNaN(cantidadNumeros) && cantidadNumeros > 0) {
+            
+            
+            for (let i = 0; i < cantidadNumeros; i++) {
+                
+                let numero = parseFloat(prompt(`Ingresa el número ${i + 1} de ${cantidadNumeros}:`));
+                
+                
+                if (!isNaN(numero)) {
+                    numerosIngresados.push(numero);
+                } else {
+                    alert("Por favor, ingresa un valor numérico válido.");
+                    i--; 
+                }
+            }
+
+            
+            let resultadoFinal = duplicar(numerosIngresados);
+
+            
+            let mensajeResultado = `
+                <h3>Resultados de la Operación:</h3>
+                <p><strong>Arreglo Original:</strong> [ ${numerosIngresados.join(', ')} ]</p>
+                <p><strong>Arreglo Duplicado:</strong> [ ${resultadoFinal.join(', ')} ]</p>
+            `;
+
+            
+            document.getElementById('resultado').innerHTML = mensajeResultado;
+            
+            
+            console.log(`Original: [${numerosIngresados}] -> Duplicado: [${resultadoFinal}]`);
+
+        } else {
+            alert("Ingresaste una cantidad inválida. Por favor, recarga la página e intenta con un número mayor a 0.");
+        }
+    </script>
+</body>
+</html>

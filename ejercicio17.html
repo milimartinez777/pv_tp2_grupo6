@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio JavaScript 17 - Contar Letra A</title>
+</head>
+<body>
+
+    <h1>Resultado en la Consola (F12)</h1>
+
+    <script>
+        
+        function contarLetraA(texto) {
+            let contador = 0;
+            
+            for (let i = 0; i < texto.length; i++) {
+                
+                if (texto[i] === 'a' || texto[i] === 'A') {
+                    contador++;
+                }
+            }
+            return contador;
+        }
+
+        
+        const frase = "Aprendiendo JavaScript en la Tecnicatura";
+        const cantidad = contarLetraA(frase);
+
+        
+        console.log(`En la frase: "${frase}"`);
+        console.log(`La letra "a" aparece ${cantidad} veces.`);
+    </script>
+    
+</body>
+</html>

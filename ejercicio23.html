@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 23 - Módulos y Eventos DOM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .contenedor {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        #resultado {
+            padding: 15px;
+            min-height: 24px;
+            border: 2px dashed #007bff;
+            border-radius: 4px;
+            transition: background-color 0.3s ease; 
+        }
+        
+        
+        .fondo-normal {
+            background-color: transparent;
+        }
+        .fondo-alerta {
+            background-color: #ffcccc; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h2>Espejo de Texto</h2>
+        <input type="text" id="texto-input" placeholder="Escribe algo aquí...">
+        
+        
+        <p id="resultado" class="fondo-normal"></p>
+    </div>
+
+    
+    <script type="module" src="js/ejercicio19.js"></script>
+</body>
+</html>
