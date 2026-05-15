@@ -20,7 +20,7 @@ export const mostrarEstudiante = (a, b, c)=>{
             <h3>Los datos ingresados son:</h3>
             <p><strong>Nombre:</strong> ${a}</p>
             <p><strong>Apellido:</strong> ${b}</p>
-            <p><strong>Libreta Universitaria:</strong> ${c}</p>
+            <p><strong>Libreta Universitaria:</strong> APU999${c}</p>
         `;
 
         return fichaInfo;

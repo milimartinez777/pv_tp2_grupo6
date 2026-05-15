@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
        
         // 4. Agregar el elemento al DOM
         contenedorResultado.appendChild(ficha);
-        alert(`Datos: ${nombreVal} ${apellidoVal}, LU: ${luVal}`);
+        alert(`Datos: ${nombreVal} ${apellidoVal}, LU: APU999${luVal}`);
 
          formulario.reset();
     });
