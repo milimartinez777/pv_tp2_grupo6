@@ -1,59 +1,70 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio24</title>
-    <style>
-        body{
-            background-color: rgb(252, 252, 252);
-            font-family: monospace;
-            text-align: center;
-            font-size: large;
-        }
-        #CambioC{
-            background-color: black;
-            color: rgb(255, 255, 255);
-            border-radius: 12%;
-            font-size: large;
-            border-style: groove;
-            border-width: 7px;
-        }
-        #img{
-            max-height: 50px;
-            margin-top: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Ejercicio 24_tp2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #333;
+    }
+    .mat {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .opción {
+      margin-bottom: 10px;
+    }
+    #resu {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #e0f7fa;
+      border: 1px solid #00acc1;
+      border-radius: 5px;
+      color: #007c91;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>
-            Trabajo Grupal / Grupo Nº6
-        </h1>
-        <h2>
-            Programacion visual 2025
-        </h2>
-        <h3>
-            5 integrantes
-        </h3>
-    </header>
-    <div>
-        <p>
-            <strong>Al apretar el boton se cambiara el color del body</strong>
-        </p>
+  <div class="mat">
+    <h1>Materias</h1>
+    
+    <div class="opción">
+      <input type="radio" id="PV" name="Materia" value="Programacion Visual">
+      <label for="PV">Programacion Visual</label>
     </div>
-    <br>
-    <button id="CambioC">
-        Cambiar color
-    </button>
-    <div>
-        <img  src="https://images.emojiterra.com/google/noto-emoji/animated-emoji/261d-1f3fc.gif" alt="" id="img">
+    
+    <div class="opción">
+      <input type="radio" id="ALG" name="Materia" value="Algebra">
+      <label for="ALG">Algebra</label>
     </div>
-    <footer>
-        <h3>
-            Facultad de Ingeniria 
-        </h3>
-    </footer>
-    <script type="module" src="js/ejercicio24.js"></script>
+    
+    <div class="opción">
+      <input type="radio" id="BS2" name="Materia" value="Base de datos 2">
+      <label for="BS2">Base de datos 2</label>
+    </div>
+
+    <div class="opción">
+      <input type="radio" id="Ing3" name="Materia" value="Ingles 3">
+      <label for="Ing3">Ingles 3</label>
+    </div>
+
+    <div class="opción">
+      <input type="radio" id="LSO2" name="Materia" value="Laboratorio de sistemas operativos 2">
+      <label for="LSO2">Laboratorio de sistemas operativos 2</label>
+    </div> 
+
+    <div id="resu">Seleccioná una materia</div>
+  </div>
+
+  <script type="module" src="js/ejercicio24.js"></script>
 </body>
 </html>

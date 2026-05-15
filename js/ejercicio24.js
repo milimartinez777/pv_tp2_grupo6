@@ -1,15 +1,15 @@
-const numA = () => Math.floor(Math.random() * 256);
+import { formatearMensaje } from './funciones24.js';
 
-const colorA = () => {
-    return `rgb(${numA()}, ${numA()}, ${numA()})`;
-};
+const radios = document.querySelectorAll('input[name="Materia"]');
+const resu = document.getElementById("resu");
 
-document.getElementById('CambioC').addEventListener('click', () => {
-
-    const color = colorA();
-
-    document.body.style.backgroundColor = color;
-
-    console.log("El color de fondo cambió a:", color);
-
+radios.forEach(radio => {
+    radio.addEventListener("change", (e) => {
+        if (e.target.checked) {
+            
+            resu.textContent = formatearMensaje(e.target.value);
+            
+            console.log(`Seleccionaste: ${e.target.value}`);
+        }
+    });
 });
